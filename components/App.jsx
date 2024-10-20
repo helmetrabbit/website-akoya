@@ -20,7 +20,7 @@ export default function App() {
     <div className="min-h-screen text-gray-800">
       <ShaderBackground /> {/* Renders the background */}
       <Navbar />
-      <main className="max-w-2xl mx-auto px-4 py-16 space-y-32">
+      <main className="max-w-4xl mx-auto px-4 py-16 space-y-32">
         <motion.section
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,14 +55,14 @@ export default function App() {
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <div className="flex flex-wrap items-center gap-4 w-full">
         <Input
-          className="flex-grow w-full xs:w-auto"
+          className="flex-grow w-full xs:text-center sm:text-left xs:w-auto"
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <Button className="w-full xs:w-auto button-simple" type="submit">
+        <Button className="w-full xs:w-auto mx-auto button-simple" type="submit">
           Get Started
         </Button>
       </div>

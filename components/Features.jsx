@@ -11,14 +11,14 @@ const features = [
 export const Features = () => (
   <section id="features" className="py-16">
     <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">Features</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-full mx-auto px-4">
       {features.map((feature, index) => (
         <motion.div
           key={index}
           whileHover={{ scale: 1.05 }}
-          className="card-glow" /* Apply a glow effect for hover */
+          className="card-glow flex-grow"
         >
-          <Card className="glass-effect"> {/* Add the glass effect class */}
+          <Card className="glass-effect">
             <h3 className="text-xl font-semibold mb-2 text-black">{feature.title}</h3>
             <p className="text-gray-700">{feature.description}</p>
           </Card>
