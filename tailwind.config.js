@@ -7,7 +7,11 @@ module.exports = {
     './node_modules/@radix-ui/react-*',  // Include Radix components
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '400px', // Define custom breakpoint at 400px
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),  // Form plugin for better styling

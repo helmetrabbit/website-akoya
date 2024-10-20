@@ -5,6 +5,7 @@ import { Navbar } from "./Navbar.jsx";
 import { Footer } from "./Footer.jsx";
 import { Input } from "./Input.jsx";
 import { Features } from "./Features.jsx";
+import ShaderBackground from "./AmbientBackground.jsx"; // Importing from separate file
 
 export default function App() {
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen text-gray-800">
+      <ShaderBackground /> {/* Renders the background */}
       <Navbar />
       <main className="container mx-auto px-4 py-16 space-y-32">
         <motion.section
@@ -25,10 +27,10 @@ export default function App() {
           transition={{ duration: 0.6 }}
           className="container-glass text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-feature mb-6 leading-tight">
+          <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl font-bold text-feature mb-6 leading-tight">
             Revolutionize Your Workflow
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-md xs:text-l sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Boost productivity, streamline processes, and achieve unprecedented efficiency with our innovative platform.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -36,7 +38,9 @@ export default function App() {
             <Button className="button-simple bg-gray-100">Learn More</Button>
           </div>
         </motion.section>
+
         <Features />
+
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
