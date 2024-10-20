@@ -27,6 +27,17 @@ html, body {
   border-radius: 24px;
   box-shadow:8px 30px rgba(0, 0, 0, 1);
 }
+
+/* Glassmorphism effect for the cards */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur the background for the frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support for backdrop blur */
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -46,7 +57,7 @@ html, body {
 }
 
 .button-simple:hover {
-  transform: scale(1.05);
+  transform: scale(1.0);
 }
 
 /* Updated feature cards for more emphasis */

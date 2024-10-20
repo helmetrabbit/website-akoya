@@ -43,30 +43,33 @@ export default function App() {
 
 
         <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="container-glass text-center"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers and transform your business today.
-          </p>
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex items-center gap-4 w-full">
-              <Input
-                className="flex-grow"
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <Button className="w-auto button-simple" type="submit">Get Started</Button>
-            </div>
-            {submitted && <p className="text-green-500 mt-4">Thank you for signing up!</p>}
-          </form>
-        </motion.section>
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  <div className="card container-glass text-center">
+    <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready to Get Started?</h2>
+    <p className="text-xl text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+      Join thousands of satisfied customers and transform your business today.
+    </p>
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <div className="flex flex-wrap items-center gap-4 w-full">
+        <Input
+          className="flex-grow w-full xs:w-auto"
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <Button className="w-full xs:w-auto button-simple" type="submit">
+          Get Started
+        </Button>
+      </div>
+      {submitted && <p className="text-green-500 mt-4">Thank you for signing up!</p>}
+    </form>
+  </div>
+</motion.section>
       </main>
       <Footer />
     </div>
