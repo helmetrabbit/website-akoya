@@ -20,7 +20,7 @@ export default function App() {
     <div className="min-h-screen text-gray-800">
       <ShaderBackground /> {/* Renders the background */}
       <Navbar />
-      <main className="container mx-auto px-4 py-16 space-y-32">
+      <main className="max-w-2xl mx-auto px-4 py-16 space-y-32">
         <motion.section
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,6 +41,7 @@ export default function App() {
 
         <Features />
 
+
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,15 +53,16 @@ export default function App() {
             Join thousands of satisfied customers and transform your business today.
           </p>
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4 w-full">
               <Input
+                className="flex-grow"
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <Button className="button-simple" type="submit">Get Started</Button>
+              <Button className="w-auto button-simple" type="submit">Get Started</Button>
             </div>
             {submitted && <p className="text-green-500 mt-4">Thank you for signing up!</p>}
           </form>
