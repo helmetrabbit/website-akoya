@@ -25,7 +25,7 @@ html, body {
   backdrop-filter: blur(12px);
   padding: 4rem;
   border-radius: 24px;
-  border: solid;
+  border: solid 1px black;
   box-shadow:8px 30px rgba(0, 0, 0, 1);
 }
 
@@ -35,7 +35,7 @@ html, body {
   backdrop-filter: blur(10px); /* Blur the background for the frosted glass effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support for backdrop blur */
   border-radius: 12px; /* Smooth rounded corners */
-  border: solid;
+  border: solid 1px black;
   box-shadow: 4px 16px rgba(0, 0, 0, 1); /* Soft shadow */
 }
 
@@ -54,6 +54,7 @@ html, body {
   border-radius: 12px;
   color: #2d2d2d;
   transition: transform 0.3s ease;
+  border: solid 1px black;
   backdrop-filter: blur(1px); /* Add blur to soften background */
   box-shadow:  4px 10px rgba(0, 0, 0, 0.01);
 }

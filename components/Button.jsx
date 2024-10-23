@@ -107,7 +107,7 @@ export const Button = ({ children, className = "", ...props }) => {
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className={`relative rounded-md overflow-hidden ${className}`} // Ensure overflow hidden to contain the canvas
+      className={`relative rounded-md overflow-hidden`} // Ensure overflow hidden to contain the canvas
     >
       {/* Shader effect canvas */}
       <ShaderEffectCanvas />
