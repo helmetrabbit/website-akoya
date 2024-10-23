@@ -85,7 +85,7 @@ const ShaderBackground = () => {
     requestAnimationFrame(render);
   }, []);
 
-  return <canvas ref={canvasRef} style={{ opacity: .2, position: 'fixed', top: 0, left: 0, width: '100svw', height: '100vh', zIndex: -1, filter: 'blur(0px)' }} />;
+  return <canvas ref={canvasRef} style={{ opacity: .2, position: 'fixed', top: 0, left: 0, width: '100svw', height: '100vh', zIndex: -1, filter: 'blur(2px)' }} />;
 };
 
 
